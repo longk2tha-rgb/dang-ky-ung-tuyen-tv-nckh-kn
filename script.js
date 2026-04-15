@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwhTenYZfTZDonz7fwRpUFxRKG8gkMjSpY16ssQzl9BZBOhS4xjVAc77VoPxhUKlIP8/exec";
 
 const THANK_YOU_MESSAGE =
   "Cảm ơn bạn đã quan tâm đăng ký, chúng tôi sẽ thông báo kết quả cho bạn qua email hoặc SĐT sau khi có kết quả. Trân trọng";
