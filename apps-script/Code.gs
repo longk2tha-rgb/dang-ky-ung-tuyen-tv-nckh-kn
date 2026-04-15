@@ -1,6 +1,6 @@
 function doPost(e) {
   var sheetId = "1_IuVymQC4mOpTNFjRAP3OAM55N-nqG5OML2ArIHwA10";
-  var sheetName = "Form Responses";
+  var sheetName = "Form_Responses";
   var ss = SpreadsheetApp.openById(sheetId);
   var sheet = ss.getSheetByName(sheetName) || ss.insertSheet(sheetName);
 
@@ -36,9 +36,14 @@ function doPost(e) {
     return e.parameter[key] || "";
   });
 
-  sheet.appendRow(values);
-
-  return ContentService.createTextOutput(
-    JSON.stringify({ success: true })
-  ).setMimeType(ContentService.MimeType.JSON);
+  try {
+    sheet.appendRow(values);
+    return ContentService.createTextOutput(
+      JSON.stringify({ success: true })
+    ).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ success: false, message: String(err) })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
 }

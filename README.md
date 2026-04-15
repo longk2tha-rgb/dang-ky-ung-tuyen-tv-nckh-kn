@@ -31,6 +31,10 @@ Form web responsive cho desktop (Windows) và điện thoại, có thể gửi d
    - `https://script.google.com/macros/s/xxxxxx/exec`
 7. Mở `script.js`, dán URL vào biến `APPS_SCRIPT_URL`.
 
+Luu y:
+- Dung URL Web App ket thuc bang `/exec`.
+- Khong dung link Google Sheet va khong dung link `.../macros/library/...`.
+
 ## Chạy local
 
 Chỉ cần mở file `index.html` hoặc chạy qua Live Server.

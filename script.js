@@ -60,7 +60,16 @@ async function postToSheet(payload) {
     body
   });
 
-  if (!response.ok) {
+  const rawText = await response.text();
+  let result;
+
+  try {
+    result = JSON.parse(rawText);
+  } catch (_error) {
+    throw new Error("Phan hoi tu Apps Script khong hop le. Vui long kiem tra quyen deploy.");
+  }
+
+  if (!response.ok || !result.success) {
     throw new Error("Không thể gửi dữ liệu.");
   }
 }
