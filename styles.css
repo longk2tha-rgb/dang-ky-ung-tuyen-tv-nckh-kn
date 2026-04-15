@@ -1,0 +1,354 @@
+:root {
+  --bg-deep: #0f5d92;
+  --bg-soft: #f2f4e7;
+  --card: rgba(255, 255, 255, 0.9);
+  --text-main: #0d3653;
+  --text-muted: #356179;
+  --accent: #1ba83c;
+  --accent-strong: #0f5d92;
+  --accent-soft: #ddf6ea;
+  --line: #c7d8df;
+  --star: #f49a4a;
+  --danger: #af2f2f;
+  --shadow: 0 14px 40px rgba(15, 64, 92, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at 15% 10%, #d7ecff, transparent 45%),
+    radial-gradient(circle at 85% 30%, #d6f3e4, transparent 40%),
+    linear-gradient(160deg, #f9f9ef 0%, #eef7fa 45%, #f4fbf5 100%);
+  min-height: 100vh;
+  position: relative;
+  padding: 28px 14px 40px;
+}
+
+.bg-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(5px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.38;
+}
+
+.bg-shape-a {
+  width: 340px;
+  height: 340px;
+  background: #88c5ec;
+  top: -80px;
+  right: -60px;
+}
+
+.bg-shape-b {
+  width: 280px;
+  height: 280px;
+  background: #95d9af;
+  bottom: -70px;
+  left: -50px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: liftIn 0.55s ease;
+}
+
+.hero {
+  background: linear-gradient(125deg, #0f5d92 0%, #0f4d77 52%, #178841 100%);
+  color: #f2fbff;
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow: var(--shadow);
+}
+
+.logo-wrap {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #f2f4e7;
+  padding: 7px;
+  margin: 0 auto 12px;
+  box-shadow: 0 8px 20px rgba(7, 34, 53, 0.25);
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: scale(1.045);
+  clip-path: circle(43% at 50% 50%);
+  background: #f2f4e7;
+}
+
+.kicker {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+h1,
+h2,
+legend {
+  font-family: "Fraunces", serif;
+}
+
+h1 {
+  margin: 10px 0 10px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  text-align: center;
+}
+
+.intro {
+  margin: 0;
+  max-width: 760px;
+  color: #d7edfb;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  margin-top: 18px;
+  background: var(--card);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.section {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcfb 100%);
+}
+
+legend {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f5d92;
+  padding: 0 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field > span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #bfd4de;
+  border-radius: 12px;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--text-main);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #879cae;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px rgba(27, 168, 60, 0.18);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.inline .choices {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.choices label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid #cce0d2;
+  border-radius: 10px;
+  background: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.choices label:hover {
+  border-color: #8ec499;
+  background: #f6fdf8;
+}
+
+.choices input[type="radio"],
+.choices input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--accent);
+}
+
+.notice {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  color: #12553b;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  background: linear-gradient(120deg, var(--accent) 0%, #17a99a 45%, var(--accent-strong) 100%);
+  color: #fff;
+  padding: 13px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(13, 94, 145, 0.25);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.74;
+}
+
+.thankyou {
+  margin-top: 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #d3e5dd;
+  box-shadow: var(--shadow);
+  padding: 22px;
+  animation: liftIn 0.35s ease;
+}
+
+.thankyou h2 {
+  margin: 0 0 8px;
+  color: #0f5d92;
+}
+
+.thankyou p {
+  margin: 0;
+  color: #2e4b59;
+  line-height: 1.6;
+}
+
+.thankyou::after {
+  content: "★★★★★";
+  display: block;
+  margin-top: 10px;
+  color: var(--star);
+  letter-spacing: 0.3em;
+  font-size: 1.05rem;
+}
+
+.field.error input,
+.field.error textarea {
+  border-color: var(--danger);
+}
+
+.field.error span::after {
+  content: " *Vui lòng điền mục này";
+  color: var(--danger);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@keyframes liftIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    padding: 14px 10px 24px;
+  }
+
+  .hero {
+    border-radius: 18px;
+    padding: 18px 16px;
+  }
+
+  .logo-wrap {
+    width: 98px;
+    height: 98px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  legend {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+  }
+}

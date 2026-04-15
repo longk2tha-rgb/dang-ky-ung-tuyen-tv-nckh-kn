@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phiếu Đăng Ký Ứng Tuyển - NCKH & Khởi Nghiệp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="logo-wrap" aria-hidden="true">
+        <img src="assets/logo-clb.png" alt="Logo NCKH & Khoi Nghiep" class="logo" />
+      </div>
+      <p class="kicker">Vòng 1 - Tuyển Thành Viên</p>
+      <h1>Phiếu Đăng Ký Ứng Tuyển</h1>
+      <p class="intro">
+        Nhóm Nghiên Cứu Khoa Học & Khởi Nghiệp (định hướng AI) trân trọng cảm ơn bạn đã quan tâm.
+        Vui lòng điền đầy đủ và trung thực thông tin bên dưới.
+      </p>
+    </header>
+
+    <section class="card">
+      <form id="applicationForm" novalidate>
+        <fieldset class="section">
+          <legend>I. Thông tin cá nhân</legend>
+
+          <div class="grid two">
+            <label class="field">
+              <span>Họ và tên</span>
+              <input type="text" name="fullName" required />
+            </label>
+
+            <label class="field">
+              <span>Ngày sinh</span>
+              <input type="date" name="birthDate" required />
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label class="field">
+              <span>Lớp / Khoa / Khóa</span>
+              <input type="text" name="classInfo" required />
+            </label>
+
+            <label class="field">
+              <span>Số điện thoại</span>
+              <input type="tel" name="phone" pattern="[0-9+ ]{9,15}" required />
+            </label>
+          </div>
+
+          <div class="grid two">
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+
+            <label class="field">
+              <span>Link Facebook (nếu có)</span>
+              <input type="url" name="facebook" placeholder="https://facebook.com/..." />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="section">
+          <legend>II. Định hướng và động lực</legend>
+
+          <label class="field">
+            <span>Lý do bạn muốn tham gia nhóm (tối thiểu 5-7 dòng)</span>
+            <textarea name="motivation" rows="5" minlength="80" required></textarea>
+          </label>
+
+          <label class="field">
+            <span>Mục tiêu cá nhân sau 3-6 tháng khi tham gia nhóm</span>
+            <textarea name="goal" rows="4" required></textarea>
+          </label>
+
+          <div class="field inline">
+            <span>Thời gian có thể dành cho hoạt động nhóm mỗi tuần</span>
+            <div class="choices">
+              <label><input type="radio" name="weeklyTime" value="Duoi 1 gio" required /> Dưới 1 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="1 den 3 gio" /> Từ 1 đến 3 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="3 den 5 gio" /> Từ 3 đến 5 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="Tren 5 gio" /> Trên 5 giờ</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="section">
+          <legend>III. Năng lực và kỹ năng</legend>
+
+          <div class="field inline">
+            <span>Bạn có kinh nghiệm/kỹ năng liên quan (có thể chọn nhiều)</span>
+            <div class="choices">
+              <label><input type="checkbox" name="skills" value="Cong nghe / AI" /> Công nghệ / Trí tuệ nhân tạo (AI)</label>
+              <label><input type="checkbox" name="skills" value="Nghien cuu khoa hoc / viet hoc thuat" /> Nghiên cứu khoa học / viết học thuật</label>
+              <label><input type="checkbox" name="skills" value="Thiet ke" /> Thiết kế (Canva, PowerPoint,...)</label>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <label class="field">
+              <span>Lập trình (ghi rõ ngôn ngữ nếu có)</span>
+              <input type="text" name="programming" placeholder="Ví dụ: Python, JavaScript..." />
+            </label>
+
+            <label class="field">
+              <span>Kỹ năng khác</span>
+              <input type="text" name="otherSkill" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Một hoạt động/học tập bạn đã tham gia với tinh thần nghiêm túc và có trách nhiệm</span>
+            <textarea name="seriousActivity" rows="4" required></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="section">
+          <legend>IV. Tư duy và phương pháp làm việc</legend>
+
+          <label class="field">
+            <span>Khi được giao nhiệm vụ mới chưa có kinh nghiệm, bạn sẽ xử lý thế nào?</span>
+            <textarea name="newTaskApproach" rows="4" required></textarea>
+          </label>
+
+          <div class="field inline">
+            <span>Theo bạn, yếu tố nào quan trọng hơn trong công việc?</span>
+            <div class="choices">
+              <label><input type="radio" name="workPriority" value="Hoan thanh chinh xac ngay tu dau" required /> Hoàn thành chính xác ngay từ đầu</label>
+              <label><input type="radio" name="workPriority" value="Trien khai nhanh va dieu chinh" /> Triển khai nhanh, điều chỉnh trong quá trình thực hiện</label>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Giải thích ngắn gọn lựa chọn của bạn</span>
+            <textarea name="priorityReason" rows="3" required></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="section">
+          <legend>V. Cam kết tham gia</legend>
+
+          <div class="field inline">
+            <span>Bạn có thể tham gia đầy đủ buổi họp định kỳ (01 buổi/tuần) không?</span>
+            <div class="choices">
+              <label><input type="radio" name="weeklyMeeting" value="Co" required /> Có</label>
+              <label><input type="radio" name="weeklyMeeting" value="Khong" /> Không</label>
+            </div>
+          </div>
+
+          <div class="field inline">
+            <span>Bạn có sẵn sàng cam kết tham gia tối thiểu 03-06 tháng không?</span>
+            <div class="choices">
+              <label><input type="radio" name="commitPeriod" value="Co" required /> Có</label>
+              <label><input type="radio" name="commitPeriod" value="Khong" /> Không</label>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Cam kết cá nhân khi tham gia nhóm</span>
+            <textarea name="personalCommitment" rows="4" required></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="section">
+          <legend>VI. Đánh giá phù hợp</legend>
+
+          <label class="field">
+            <span>Nếu được lựa chọn, bạn dự kiến sẽ đóng góp cụ thể gì cho nhóm trong 01 tháng đầu?</span>
+            <textarea name="firstMonthContribution" rows="4" required></textarea>
+          </label>
+        </fieldset>
+
+        <div class="notice">Kết quả sẽ được thông báo qua Email hoặc SĐT sau khi có kết quả.</div>
+
+        <button class="submit-btn" type="submit" id="submitBtn">Gửi phiếu đăng ký</button>
+      </form>
+    </section>
+
+    <section id="thankYou" class="thankyou" hidden>
+      <h2>Đăng ký thành công</h2>
+      <p>Cảm ơn bạn đã quan tâm đăng ký, chúng tôi sẽ thông báo kết quả cho bạn qua email hoặc SĐT sau khi có kết quả. Trân trọng</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
