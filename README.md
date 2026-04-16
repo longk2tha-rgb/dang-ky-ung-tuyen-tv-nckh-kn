@@ -34,6 +34,12 @@ Form web responsive cho desktop (Windows) và điện thoại, có thể gửi d
 Luu y:
 - Dung URL Web App ket thuc bang `/exec`.
 - Khong dung link Google Sheet va khong dung link `.../macros/library/...`.
+- Header va gia tri du lieu da duoc cau hinh de hien thi 100% tieng Viet co dau trong Google Sheet.
+
+## Chuan hoa du lieu cu
+
+Neu trong Sheet da co ban ghi khong dau (vi du `Duoi 1 gio`, `Khong`, `Cong nghe / AI`),
+vao Apps Script va chay ham `runNormalizeOldData()` mot lan de chuan hoa toan bo du lieu cu sang tieng Viet co dau.
 
 ## Chạy local
 
