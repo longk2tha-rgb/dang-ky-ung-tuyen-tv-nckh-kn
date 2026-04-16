@@ -32,7 +32,9 @@ function buildPayload() {
     timestamp: new Date().toISOString(),
     fullName: formData.get("fullName") || "",
     birthDate: formData.get("birthDate") || "",
-    classInfo: formData.get("classInfo") || "",
+    classField: formData.get("classField") || "",
+    department: formData.get("department") || "",
+    courseYear: formData.get("courseYear") || "",
     phone: formData.get("phone") || "",
     email: formData.get("email") || "",
     facebook: formData.get("facebook") || "",
@@ -49,7 +51,8 @@ function buildPayload() {
     weeklyMeeting: formData.get("weeklyMeeting") || "",
     commitPeriod: formData.get("commitPeriod") || "",
     personalCommitment: formData.get("personalCommitment") || "",
-    firstMonthContribution: formData.get("firstMonthContribution") || ""
+    aiTools: formData.get("aiTools") || "",
+    aiPrompt: formData.get("aiPrompt") || ""
   };
 }
 

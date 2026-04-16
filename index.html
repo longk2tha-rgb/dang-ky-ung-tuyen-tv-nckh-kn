@@ -21,8 +21,8 @@
       <p class="kicker">Vòng 1 - Tuyển Thành Viên</p>
       <h1>Phiếu Đăng Ký Ứng Tuyển</h1>
       <p class="intro">
-        Nhóm Nghiên Cứu Khoa Học & Khởi Nghiệp (định hướng AI) trân trọng cảm ơn bạn đã quan tâm.
-        Vui lòng điền đầy đủ và trung thực thông tin bên dưới.
+        Nhóm Nghiên Cứu Khoa Học & Khởi Nghiệp trân trọng cảm ơn bạn đã quan tâm và đăng ký ứng tuyển.
+        Bạn vui lòng điền đầy đủ các trường thông tin bên dưới.
       </p>
     </header>
 
@@ -43,51 +43,62 @@
             </label>
           </div>
 
-          <div class="grid two">
+          <div class="grid three">
             <label class="field">
-              <span>Lớp / Khoa / Khóa</span>
-              <input type="text" name="classInfo" required />
+              <span>Lớp</span>
+              <input type="text" name="classField" required />
             </label>
 
+            <label class="field">
+              <span>Khoa</span>
+              <input type="text" name="department" required />
+            </label>
+
+            <label class="field">
+              <span>Khóa</span>
+              <input type="text" name="courseYear" required />
+            </label>
+          </div>
+
+          <div class="grid two">
             <label class="field">
               <span>Số điện thoại</span>
               <input type="tel" name="phone" pattern="[0-9+ ]{9,15}" required />
             </label>
-          </div>
 
-          <div class="grid two">
             <label class="field">
               <span>Email</span>
               <input type="email" name="email" required />
             </label>
-
-            <label class="field">
-              <span>Link Facebook (nếu có)</span>
-              <input type="url" name="facebook" placeholder="https://facebook.com/..." />
-            </label>
           </div>
+
+          <label class="field">
+            <span>Link Facebook (nếu có)</span>
+            <input type="url" name="facebook" placeholder="https://facebook.com/..." />
+          </label>
+
         </fieldset>
 
         <fieldset class="section">
           <legend>II. Định hướng và động lực</legend>
 
           <label class="field">
-            <span>Lý do bạn muốn tham gia nhóm (tối thiểu 5-7 dòng)</span>
+            <span>Trình bày lý do bạn mong muốn tham gia Nhóm Nghiên cứu Khoa học & Khởi nghiệp (tối thiểu 5-7 dòng)</span>
             <textarea name="motivation" rows="5" minlength="80" required></textarea>
           </label>
 
           <label class="field">
-            <span>Mục tiêu cá nhân sau 3-6 tháng khi tham gia nhóm</span>
+            <span>Mục tiêu cá nhân bạn mong muốn đạt được sau 3-6 tháng sau khi tham gia nhóm</span>
             <textarea name="goal" rows="4" required></textarea>
           </label>
 
           <div class="field inline">
             <span>Thời gian có thể dành cho hoạt động nhóm mỗi tuần</span>
             <div class="choices">
-              <label><input type="radio" name="weeklyTime" value="Dưới 1 giờ" required /> Dưới 1 giờ</label>
-              <label><input type="radio" name="weeklyTime" value="Từ 1 đến 3 giờ" /> Từ 1 đến 3 giờ</label>
-              <label><input type="radio" name="weeklyTime" value="Từ 3 đến 5 giờ" /> Từ 3 đến 5 giờ</label>
-              <label><input type="radio" name="weeklyTime" value="Trên 5 giờ" /> Trên 5 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="Dưới 2 giờ" required /> Dưới 2 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="Từ 2 – 4 giờ" /> Từ 2 – 4 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="Từ 4 – 8 giờ" /> Từ 4 – 8 giờ</label>
+              <label><input type="radio" name="weeklyTime" value="Trên 8 giờ" /> Trên 8 giờ</label>
             </div>
           </div>
         </fieldset>
@@ -96,11 +107,11 @@
           <legend>III. Năng lực và kỹ năng</legend>
 
           <div class="field inline">
-            <span>Bạn có kinh nghiệm/kỹ năng liên quan (có thể chọn nhiều)</span>
+            <span>Bạn có kinh nghiệm hoặc kỹ năng nào liên quan đến các lĩnh vực sau (có thể chọn nhiều)</span>
             <div class="choices">
               <label><input type="checkbox" name="skills" value="Công nghệ / Trí tuệ nhân tạo (AI)" /> Công nghệ / Trí tuệ nhân tạo (AI)</label>
-              <label><input type="checkbox" name="skills" value="Nghiên cứu khoa học / viết học thuật" /> Nghiên cứu khoa học / viết học thuật</label>
-              <label><input type="checkbox" name="skills" value="Thiết kế" /> Thiết kế (Canva, PowerPoint,...)</label>
+              <label><input type="checkbox" name="skills" value="Nghiên cứu khoa học / Viết học thuật" /> Nghiên cứu khoa học / Viết học thuật</label>
+              <label><input type="checkbox" name="skills" value="Thiết kế (Canva, PowerPoint,...)" /> Thiết kế (Canva, PowerPoint,...)</label>
             </div>
           </div>
 
@@ -117,7 +128,7 @@
           </div>
 
           <label class="field">
-            <span>Một hoạt động/học tập bạn đã tham gia với tinh thần nghiêm túc và có trách nhiệm</span>
+            <span>Hãy mô tả một việc bạn đã làm nghiêm túc từ đầu đến cuối. Bạn đã làm gì, gặp khó khăn gì và kết quả ra sao?</span>
             <textarea name="seriousActivity" rows="4" required></textarea>
           </label>
         </fieldset>
@@ -126,7 +137,7 @@
           <legend>IV. Tư duy và phương pháp làm việc</legend>
 
           <label class="field">
-            <span>Khi được giao nhiệm vụ mới chưa có kinh nghiệm, bạn sẽ xử lý thế nào?</span>
+            <span>Khi nhận một nhiệm vụ bạn chưa biết làm, bạn sẽ xử lý theo các bước cụ thể nào?</span>
             <textarea name="newTaskApproach" rows="4" required></textarea>
           </label>
 
@@ -139,7 +150,7 @@
           </div>
 
           <label class="field">
-            <span>Giải thích ngắn gọn lựa chọn của bạn</span>
+            <span>Vui lòng giải thích ngắn gọn lựa chọn của bạn</span>
             <textarea name="priorityReason" rows="3" required></textarea>
           </label>
         </fieldset>
@@ -164,17 +175,22 @@
           </div>
 
           <label class="field">
-            <span>Cam kết cá nhân khi tham gia nhóm</span>
+            <span>Bạn cam kết cụ thể điều gì khi tham gia nhóm?</span>
             <textarea name="personalCommitment" rows="4" required></textarea>
           </label>
         </fieldset>
 
         <fieldset class="section">
-          <legend>VI. Đánh giá phù hợp</legend>
+          <legend>VI. Nhóm câu hỏi về kĩ năng công nghệ</legend>
 
           <label class="field">
-            <span>Nếu được lựa chọn, bạn dự kiến sẽ đóng góp cụ thể gì cho nhóm trong 01 tháng đầu?</span>
-            <textarea name="firstMonthContribution" rows="4" required></textarea>
+            <span>Hãy nêu 3 công cụ AI bạn đã sử dụng và mô tả cách bạn dùng chúng trong học tập (có ví dụ cụ thể)</span>
+            <textarea name="aiTools" rows="5" required></textarea>
+          </label>
+
+          <label class="field">
+            <span>Hãy viết 1 prompt hoàn chỉnh để yêu cầu AI tạo ra nội dung một bài thuyết trình (7-10 slide) về bất kỳ chủ đề bạn chọn, sử dụng 1 trong 3 công cụ: ChatGPT / GEMINI / NotebookLM</span>
+            <textarea name="aiPrompt" rows="5" required></textarea>
           </label>
         </fieldset>
 
